@@ -1,0 +1,23 @@
+$headerHeight: 80px;
+
+.mat-toolbar {
+  height: $headerHeight;
+}
+
+.nav-icon {
+  height: $headerHeight;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+
+.nav-header {
+  height: 100%;
+
+  .mat-button {
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    width: 160px;
+  }
+}

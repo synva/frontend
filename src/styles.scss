@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css');
+@import '~material-icons/iconfont/material-icons.css';
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-teal: (
+  100: #009688,
+  500: #009688,
+  700: #009688,
+  contrast: (
+    100: white,
+    500: white,
+    700: white
+  )
+);
+
+$custom-brown: (
+  100: #795548,
+  500: #795548,
+  700: #795548,
+  contrast: (
+    100: white,
+    500: white,
+    700: white
+  )
+);
+
+$default-primary: mat-palette($custom-teal);
+$default-accent: mat-palette($custom-brown);
+$default-warn: mat-palette($mat-deep-orange);
+$default-theme: mat-light-theme($default-primary, $default-accent, $default-warn);
+@include angular-material-theme($default-theme);
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Rounded Mplus 1c';
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}

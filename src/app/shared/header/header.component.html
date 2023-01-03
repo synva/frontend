@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" fxLayoutAlign="space-between center" class="mat-elevation-z2">
+  <div fxLayoutAlign="center center">
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div fxLayoutAlign="center center" class="nav-header">
+    <button fxHide.lt-md mat-button routerLink="/">トップ</button>
+    <button fxHide.lt-md mat-button routerLink="/sample">サンプル</button>
+  </div>
+</mat-toolbar>

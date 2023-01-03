@@ -1,0 +1,19 @@
+.wrapper {
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+.barge {
+  background-color: #f00;
+  border-radius: 5px;
+  bottom: 24px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  left: 8px;
+  opacity: 0.2;
+  padding: 24px;
+  position: fixed;
+  z-index: 99;
+}

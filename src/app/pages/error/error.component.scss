@@ -1,0 +1,44 @@
+.error-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.errorPage {
+  min-height: 400px;
+  overflow: hidden;
+  width: 95%;
+}
+
+.errorCode {
+  height: 180px;
+  position: relative;
+}
+
+h1 {
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  font-size: 110px;
+  font-weight: 700;
+  left: 50%;
+  margin: 0px;
+  margin-bottom: 20px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  color: #151515;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  margin-top: 0px;
+  text-transform: uppercase;
+}

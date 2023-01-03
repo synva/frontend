@@ -1,0 +1,15 @@
+.full-screen {
+  height: 100%;
+  width: 100%;
+}
+
+.app-body {
+  height: calc(100% - 80px - 20px);
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+.mat-sidenav {
+  width: 300px;
+}
