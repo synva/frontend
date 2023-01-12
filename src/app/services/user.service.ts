@@ -18,7 +18,7 @@ export class UserService {
         this.user = new User(data);
       })
     );
-    // return this.apiService.post<Response.User>('/authenticate', { username, password }).pipe(
+    // return this.apiService.post<Response.User>('authenticate', { username, password }).pipe(
     //   map((data) => {
     //     this.user = new User(data);
     //   })
@@ -31,7 +31,7 @@ export class UserService {
         this.user = new User(data);
       })
     );
-    // return this.apiService.get<Response.User>('/login').pipe(
+    // return this.apiService.get<Response.User>('login').pipe(
     //   map((data) => {
     //     this.user = new User(data);
     //   })
@@ -44,7 +44,7 @@ export class UserService {
         this.user = null;
       })
     );
-    // return this.apiService.get('/logout').pipe(
+    // return this.apiService.get('logout').pipe(
     //   map(() => {
     //     this.user = null;
     //   })
@@ -55,7 +55,8 @@ export class UserService {
     return of({
       id: '001',
       role: 0,
-      language: 'en'
+      language: 'en',
+      name: '趙'
     });
   }
 }

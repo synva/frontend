@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'ng-header',
+  selector: 'sp-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

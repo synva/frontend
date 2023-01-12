@@ -1,12 +1,12 @@
 <mat-sidenav-container class="full-screen">
   <mat-sidenav #sidenav role="navigation">
-    <ng-sidenav-list (sidenavClose)="closeSide()"></ng-sidenav-list>
+    <sp-sidenav-list (sidenavClose)="closeSide()"></sp-sidenav-list>
   </mat-sidenav>
   <mat-sidenav-content class="full-screen">
-    <ng-header (sidenavToggle)="sidenav.toggle()"></ng-header>
+    <sp-header (sidenavToggle)="sidenav.toggle()"></sp-header>
     <div #appBody class="app-body">
       <router-outlet></router-outlet>
     </div>
-    <ng-footer></ng-footer>
+    <sp-footer></sp-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

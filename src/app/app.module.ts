@@ -7,6 +7,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
+import { forkJoin } from 'rxjs';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module';
@@ -20,19 +21,26 @@ import { DirectiveModule } from './directives/directives.module';
 import { PagesModule } from './pages/pages.module';
 import { PipesModule } from './pipes/pipes.module';
 
-// services
-import { ApiService } from './services/api.service';
-import { UserService } from './services/user.service';
-
 // utils
 import { Interceptor } from './utils/interceptor';
 import { AuthGuard } from './utils/auth-guard';
+import { GoodsGuard } from './utils/goods-guard';
+
+// services
+import { ApiService } from './services/api.service';
+import { UserService } from './services/user.service';
+import { ProductService } from './services/product.service';
+import { GoodsService } from './services/goods.service';
+import { Product2Service } from './services/product2.service';
 
 // APP initialize
 // DO NOT USE apiService here!
-// export function appFactory (userService: UserService) {
-//   // load master data...
-// }
+export function appFactory(productService: ProductService, product2Service: Product2Service) {
+  return () => {
+    // return productService.getProductMaster();
+    return forkJoin([productService.getProductMaster(), product2Service.getProductMaster()]);
+  };
+}
 
 export const MY_FORMATS = {
   parse: {
@@ -70,16 +78,20 @@ export const MY_FORMATS = {
       multi: true
     },
     AuthGuard,
+    GoodsGuard,
     ApiService,
     UserService,
+    ProductService,
+    Product2Service,
+    GoodsService,
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: appFactory,
-    //   deps: [UserService],
-    //   multi: true
-    // }
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: appFactory,
+      deps: [ProductService, Product2Service],
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

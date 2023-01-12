@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // utils
 import { AuthGuard } from './utils/auth-guard';
+import { GoodsGuard } from './utils/goods-guard';
 
 // components
 import { ErrorComponent } from './pages/error/error.component';
@@ -23,7 +24,7 @@ const routes: Routes = [
       {
         path: '',
         component: TopComponent,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard, GoodsGuard]
       },
       {
         path: 'sample',

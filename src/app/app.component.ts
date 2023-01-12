@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'ng-root',
+  selector: 'sp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

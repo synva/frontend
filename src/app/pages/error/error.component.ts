@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
-  selector: 'ng-error',
+  selector: 'sp-error',
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss']
 })

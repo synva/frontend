@@ -1,1 +1,16 @@
-TOP
+<div class="wrapper" fxLayout="row wrap" fxLayoutAlign="flex-start">
+  <div class="goods" *ngFor="let goods of goodsList" fxFlex="25" fxFlex.lt-lg="33.3" fxFlex.lt-md="50" fxFlex.xs="100">
+    <sp-goods-card [goods]="goods" [cutoff]="cutoff" [owner]="owner" (deleted)="deleteGoods(goods)"> </sp-goods-card>
+  </div>
+</div>
+
+<div class="wrapper2" fxLayout="row" fxLayoutAlign="flex-end">
+  <mat-form-field appearance="outline">
+    <mat-label>割引</mat-label>
+    <input matInput type="number" [(ngModel)]="cutoff" />
+  </mat-form-field>
+</div>
+
+<div class="wrapper2" fxLayout="row" fxLayoutAlign="flex-end">
+  <button mat-raised-button (click)="changeOwner()">店主を交換</button>
+</div>

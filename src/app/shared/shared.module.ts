@@ -13,9 +13,10 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { GoodsCardComponent } from './goods-card/goods-card.component';
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, SidenavListComponent],
+  declarations: [FooterComponent, HeaderComponent, SidenavListComponent, GoodsCardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -28,6 +29,6 @@ import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
     DirectiveModule,
     PipesModule
   ],
-  exports: [FooterComponent, HeaderComponent, SidenavListComponent]
+  exports: [FooterComponent, HeaderComponent, SidenavListComponent, GoodsCardComponent]
 })
 export class SharedModule {}

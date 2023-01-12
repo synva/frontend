@@ -4,7 +4,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'ng-signin',
+  selector: 'sp-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss']
 })

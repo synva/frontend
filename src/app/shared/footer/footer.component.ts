@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-  selector: 'ng-footer',
+  selector: 'sp-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

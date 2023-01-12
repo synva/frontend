@@ -4,7 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'ng-main',
+  selector: 'sp-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
