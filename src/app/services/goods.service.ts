@@ -70,6 +70,30 @@ export class GoodsService {
         shop: '火星支店',
         price: 1000,
         limit: 1701086666000
+      },
+      {
+        id: '001',
+        shop: '火星支店',
+        price: 2100,
+        limit: 1661086666253
+      },
+      {
+        id: '002',
+        shop: '火星支店',
+        price: 1000,
+        limit: 1701086666000
+      },
+      {
+        id: '001',
+        shop: '火星支店',
+        price: 2100,
+        limit: 1661086666253
+      },
+      {
+        id: '002',
+        shop: '火星支店',
+        price: 1000,
+        limit: 1701086666000
       }
     ]);
   }

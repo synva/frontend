@@ -14,3 +14,46 @@
 <div class="wrapper2" fxLayout="row" fxLayoutAlign="flex-end">
   <button mat-raised-button (click)="changeOwner()">店主を交換</button>
 </div>
+
+<div class="wrapper2" fxLayout="row" fxLayoutAlign="flex-end">
+  {{ animal }}
+  <button mat-raised-button (click)="popup()">Dialog</button>
+</div>
+
+<div class="wrapper">
+  <div class="responsive-table mat-elevation-z2" (scroll)="handleScroll($event)">
+    <table mat-table matSort [dataSource]="dataSource" [style.min-width]="'800px'">
+      <ng-container matColumnDef="no">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let goods; let i = index">{{ i + 1 }}</td>
+      </ng-container>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let goods; let i = index">{{ goods.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>NAME</th>
+        <td mat-cell *matCellDef="let goods; let i = index">{{ goods.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>PRICE</th>
+        <td mat-cell *matCellDef="let goods; let i = index">{{ goods.price | bignumber }}</td>
+      </ng-container>
+      <ng-container matColumnDef="limit">
+        <th mat-header-cell *matHeaderCellDef>LIMIT</th>
+        <td mat-cell *matCellDef="let goods; let i = index">{{ goods.limit | date }}</td>
+      </ng-container>
+      <ng-container matColumnDef="others">
+        <th mat-header-cell *matHeaderCellDef>OTHERS</th>
+        <td mat-cell *matCellDef="let goods; let i = index">others</td>
+      </ng-container>
+      <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef>COMMENT</th>
+        <td mat-cell *matCellDef="let goods; let i = index">comment</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let goods; columns: columns"></tr>
+    </table>
+  </div>
+</div>

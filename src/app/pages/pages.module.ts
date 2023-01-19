@@ -13,10 +13,11 @@ import { SigninComponent } from './signin/signin.component';
 import { ErrorComponent } from './error/error.component';
 import { MainComponent } from './main/main.component';
 import { TopComponent } from './main/top/top.component';
+import { SampleDialogComponent } from './main/top/sample-dialog/sample-dialog.component';
 import { SampleComponent } from './main/sample/sample.component';
 
 @NgModule({
-  declarations: [SigninComponent, ErrorComponent, MainComponent, TopComponent, SampleComponent],
+  declarations: [SigninComponent, ErrorComponent, MainComponent, TopComponent, SampleComponent, SampleDialogComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -30,6 +31,7 @@ import { SampleComponent } from './main/sample/sample.component';
     DirectiveModule,
     PipesModule
   ],
-  exports: [SigninComponent, ErrorComponent, MainComponent, TopComponent, SampleComponent]
+  exports: [SigninComponent, ErrorComponent, MainComponent, TopComponent, SampleComponent],
+  entryComponents: [SampleDialogComponent]
 })
 export class PagesModule {}
