@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 import { Product2Service } from 'src/app/services/product2.service';
 import { Goods } from 'src/app/models/goods.model';
 import { User } from 'src/app/models/user.model';
+import { Contract } from 'src/app/models/contract.model';
 
 @Component({
   selector: 'sp-top',
@@ -34,6 +35,8 @@ export class TopComponent {
   trigger: boolean;
   isLast = false;
   page = 0;
+
+  contract: Contract;
 
   constructor(
     public dialog: MatDialog,
@@ -74,6 +77,8 @@ export class TopComponent {
       })
     ];
     this.owner = null;
+
+    this.contract = new Contract();
   }
 
   get realGoodsList(): Goods[] {

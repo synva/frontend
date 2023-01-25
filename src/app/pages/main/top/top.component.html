@@ -1,4 +1,4 @@
-<div class="wrapper" fxLayout="row wrap" fxLayoutAlign="flex-start">
+<!-- <div class="wrapper" fxLayout="row wrap" fxLayoutAlign="flex-start">
   <div class="goods" *ngFor="let goods of goodsList" fxFlex="25" fxFlex.lt-lg="33.3" fxFlex.lt-md="50" fxFlex.xs="100">
     <sp-goods-card [goods]="goods" [cutoff]="cutoff" [owner]="owner" (deleted)="deleteGoods(goods)"> </sp-goods-card>
   </div>
@@ -56,4 +56,28 @@
       <tr mat-row *matRowDef="let goods; columns: columns"></tr>
     </table>
   </div>
+</div> -->
+
+<div class="wrapper" fxLayout="row wrap" fxLayoutAlign="flex-end">
+  <mat-form-field fxFlex="25">
+    <mat-label>顧客</mat-label>
+    <input matInput [(ngModel)]="contract.customer" />
+    <mat-hint style="color: red" *ngIf="!!contract.checkCustomerValid()">{{ contract.checkCustomerValid() }}</mat-hint>
+  </mat-form-field>
+  <mat-form-field fxFlex="25">
+    <mat-label>商品</mat-label>
+    <input matInput [(ngModel)]="contract.goods" />
+    <mat-hint style="color: red" *ngIf="!!contract.checkGoodsValid()">{{ contract.checkGoodsValid() }}</mat-hint>
+  </mat-form-field>
+  <mat-form-field fxFlex="25">
+    <mat-label>価格</mat-label>
+    <input matInput type="number" [(ngModel)]="contract.price" />
+    <mat-hint style="color: red" *ngIf="!!contract.checkPriceValid()">{{ contract.checkPriceValid() }}</mat-hint>
+  </mat-form-field>
+  <mat-form-field fxFlex="25">
+    <mat-label>数量</mat-label>
+    <input matInput [(ngModel)]="contract.amount" />
+    <mat-hint style="color: red" *ngIf="!!contract.checkAmountValid()">{{ contract.checkAmountValid() }}</mat-hint>
+  </mat-form-field>
+  <button mat-raised-button color="accent" [disabled]="!contract.isValid">購入</button>
 </div>
