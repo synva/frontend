@@ -39,3 +39,5 @@ const something: Goods | Product;
 ## 使用 find,map,forEach 等方法取代 for 循环
 
 ## function 尽量别用
+
+## css 的 z-index 定义限定在 1-10
