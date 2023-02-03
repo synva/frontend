@@ -10,6 +10,10 @@
 
 # 开发技巧
 
+## 尽量不使用 promise,setTimeout,jquery 及相关插件
+
+## 局限性使用 ViewChild，不操作 DOM
+
 ## 定义变量首选 const,其次才是 let
 
 ## 检查 number 是否为空
